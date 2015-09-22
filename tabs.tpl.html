@@ -1,0 +1,12 @@
+<h1>Tab Design 4 ui-router</h1>
+
+<ul class="nav nav-tabs">
+    <li ui-sref-active="active">
+        <a ui-sref="tabs.first">Menu Tab</a>
+    </li>
+    <li ui-sref-active="active">
+        <a ui-sref="tabs.second.content">Content Tab</a>
+    </li>
+</ul>
+
+<div ui-view ='tabs'></div> <!--Entire Content of this page, for each view, will be injected here, this is tabs@tabs-->
