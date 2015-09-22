@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="uiTabs">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS And Ui-Router with Bootstrap Tabs</title>
+    <link data-require="bootstrap-css@*" data-semver="3.0.3" rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+    <link data-require="font-awesome@*" data-semver="4.0.3" rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+    <script data-require="angular.js@1.2.x" src="http://code.angularjs.org/1.2.9/angular.js" data-semver="1.2.9"></script>
+    <script data-require="ui-bootstrap@*" data-semver="0.10.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.min.js"></script>
+    <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-controller="MenuCtrl">
+<div class="container-fluid" style="padding:100px"> <!--Padding only to fit the Plunker Screen-->
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="nav nav-list" ng-controller="MenuCtrl">
+                <li ng-repeat="item in menu">
+                    <a ui-sref="{{item.state}}">{{item.name}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <div ui-view="mainView"></div> <!--Each Element of the app will be injected here -->
+        </div>
+    </div>
+</div>
+</body>
+</html>
