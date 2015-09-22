@@ -19,7 +19,7 @@ app.controller('MenuCtrl', ['$scope', '$stateParams', '$state',
 /*UI-ROUTER*/
 app.config(function($stateProvider,$locationProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise("/tabs");
+    $urlRouterProvider.otherwise("/");
 
     /*START TABS*/
     /*START TABS MENU*/
